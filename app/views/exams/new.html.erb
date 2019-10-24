@@ -1,1 +1,21 @@
 <h1>Exam 1</h1>
+<%= form_for :exams, url: exams_path do |f| %>
+<p>
+    <%= f.label :firstname %><br>
+    <%= f.text_field :firstname %>
+</p>
+
+<p>
+    <%= f.label :lastname %><br>
+    <%= f.text_field :lastname %>
+</p>
+
+<p>
+    <%= f.label :ID %><br>
+    <%= f.text_field :ID %>
+</p>
+
+<p>
+    <%= f.submit %>
+</p>
+<% end %>
