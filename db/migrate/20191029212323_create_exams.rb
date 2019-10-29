@@ -1,6 +1,6 @@
-class CreateInfos < ActiveRecord::Migration[5.2]
+class CreateExams < ActiveRecord::Migration[5.2]
   def change
-    create_table :infos do |t|
+    create_table :exams do |t|
       t.string :name
       t.string :student_number
 
