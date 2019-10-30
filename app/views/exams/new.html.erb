@@ -1,5 +1,8 @@
 <h1>Exam 1</h1>
+
+<div>
 <%= form_for :exams, url: exams_path do |f| %>
+
 <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -16,3 +19,4 @@
     <%= f.submit %>
 </p>
 <% end %>
+</div>
