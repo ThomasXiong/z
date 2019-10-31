@@ -1,0 +1,19 @@
+<h1>Listing Exam 1 Students</h1>
+
+
+<table align="center" border="1">
+    <tr>
+        <th>Name</th>
+        <th>Student ID</th>
+        <th>Status</th>
+    </tr>
+
+
+<% @exams.each do |exam| %>
+<tr>
+    <td><%= exam.name %></td>
+    <td><%= exam.student_number %></td>
+    <td><%= link_to 'Student', exam_path(exam) %></td>
+</tr>
+<% end %>
+</table>
