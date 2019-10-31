@@ -6,6 +6,7 @@
         <th>Name</th>
         <th>Student ID</th>
         <th>Status</th>
+        <th>Edit</th>
     </tr>
 
 
@@ -14,7 +15,12 @@
     <td><%= exam.name %></td>
     <td><%= exam.student_number %></td>
     <td><%= link_to 'Student', exam_path(exam) %></td>
+    <td><%= link_to 'Edit' , edit_exam_path(exam) %></td>
+    <td><%= link_to 'Delete',
+                            exam_path(exam),
+                            method: :delete,
+                            data: { confirm: 'Are you sure?' } %></td>
 </tr>
 <% end %>
 </table>
-<%= link_to 'Back', url_for(:back) %>
+<h1><%= link_to 'HOMEPAGE', root_path %></h1>

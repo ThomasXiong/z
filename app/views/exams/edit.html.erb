@@ -1,9 +1,7 @@
-<h1>Exam 1</h1>
-
-<div style="color:blue">
-<%= form_for :exams, url: exams_path do |f| %>
-
-
+<h1>Editing Exams</h1>
+ 
+<%= form_for :exams, url: exam_path(@exams), method: :patch do |f| %>
+ 
   <% if @exams.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -17,25 +15,21 @@
       </ul>
     </div>
   <% end %>
-
-
-<p>
+ 
+  <p>
     <%= f.label :name %><br>
-    <%= f.text_field :name, placeholder: "John Smith" %>
-</p>
-
-
-<p>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
     <%= f.label :student_number %><br>
-    <%= f.text_field :student_number %>
-</p>
-
-
-<p>
+    <%= f.text_area :student_number %>
+  </p>
+ 
+  <p>
     <%= f.submit %>
-</p>
-
+  </p>
+ 
 <% end %>
-
-<%= link_to 'HOMEPAGE', root_path %>
-</div>
+ 
+<%= link_to 'Back', exams_path %>
