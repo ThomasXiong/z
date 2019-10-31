@@ -8,14 +8,19 @@ class ExamsController < ApplicationController
     
     def new
         
+    @exams = Exam.new
+        
     end
     
     def create
         
       @exams = Exam.new(exams_params)
       
-      @exams.save
-      redirect_to @exams
+      if @exams.save
+          redirect_to @exams
+      else
+          render 'new'
+      end
         
     end
     

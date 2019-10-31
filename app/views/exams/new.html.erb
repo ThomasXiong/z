@@ -3,6 +3,22 @@
 <div style="color:blue">
 <%= form_for :exams, url: exams_path do |f| %>
 
+
+  <% if @exams.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@exams.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @exams.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
 <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -18,5 +34,8 @@
 <p>
     <%= f.submit %>
 </p>
+
 <% end %>
+
+<%= link_to 'Back', url_for(:back) %>
 </div>
