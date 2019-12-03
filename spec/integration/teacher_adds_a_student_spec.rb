@@ -27,7 +27,7 @@ feature "teacher should be able to go back to homepage" do
     expect(page).to have_content("123123124")
     end
     
-    scenario "teacher edits student info" do
+    scenario "teacher looks at database" do
     visit root_path
     expect(page).to have_content("Homepage")
     click_link "TEACHER DATABASE"
