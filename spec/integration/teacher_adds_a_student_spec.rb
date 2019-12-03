@@ -11,9 +11,15 @@ feature "teacher should be able to go back to homepage" do
     expect(page).to have_content("TEACHER DATABASE")
     end
     
-    scenario "teacher adds in new student" do
+    scenario "teacher sees submit form" do
+    visit root_path
+    click_link "EXAM 1"
+    expect(page).to have_field("Name")
+    expect(page).to have_field("Student number")
+    end
+    
+    scenario "teacher adds new student to system" do
     visit new_exam_path
-    expect(page).to have_content("Student")
     fill_in "Name", with: "Yolo"
     fill_in "Student number", with: "123123124"
     click_button "Save Exams"
