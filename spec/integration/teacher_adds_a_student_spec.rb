@@ -14,11 +14,18 @@ feature "teacher should be able to go back to homepage" do
     scenario "teacher adds in new student" do
     visit new_exam_path
     expect(page).to have_content("Student")
-    fill_in "Name", with: "Neo Smith"
-    fill_in "Student number", with: "543682175"
+    fill_in "Name", with: "Yolo"
+    fill_in "Student number", with: "123123124"
     click_button "Save Exams"
-    expect(page).to have_content("Neo Smith")
-    expect(page).to have_content("543682175")
+    expect(page).to have_content("Yolo")
+    expect(page).to have_content("123123124")
+    end
+    
+    scenario "teacher edits student info" do
+    visit root_path
+    expect(page).to have_content("Homepage")
+    click_link "TEACHER DATABASE"
+    expect(page).to have_content("EXAM 1 LIST OF STUDENTS")
     end
     
 end
