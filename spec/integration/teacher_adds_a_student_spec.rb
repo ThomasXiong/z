@@ -1,6 +1,6 @@
 require 'rails_helper.rb'
 
-feature "teacher should be able to go back to homepage" do
+feature "teacher's actions" do
     scenario "teacher navigates through the database" do
     visit exams_path
     expect(page).to have_content("EXAM 1 LIST OF STUDENTS")
