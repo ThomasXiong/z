@@ -3,17 +3,15 @@ require 'rails_helper.rb'
 feature "teacher's actions" do
     scenario "teacher navigates through the database" do
     visit exams_path
-    expect(page).to have_content("EXAM 1 LIST OF STUDENTS")
+    expect(page).to have_content("LIST OF STUDENTS")
     click_link "HOMEPAGE"
-    expect(page).to have_content("EXAM 1")
-    expect(page).to have_content("Exam 2")
-    expect(page).to have_content("Exam 3")
+    expect(page).to have_content("FINAL EXAM")
     expect(page).to have_content("TEACHER DATABASE")
     end
     
     scenario "teacher sees submit form" do
     visit root_path
-    click_link "EXAM 1"
+    click_link "FINAL EXAM"
     expect(page).to have_field("Name")
     expect(page).to have_field("Student number")
     end
@@ -31,7 +29,7 @@ feature "teacher's actions" do
     visit root_path
     expect(page).to have_content("Homepage")
     click_link "TEACHER DATABASE"
-    expect(page).to have_content("EXAM 1 LIST OF STUDENTS")
+    expect(page).to have_content("LIST OF STUDENTS")
     end
     
 end
