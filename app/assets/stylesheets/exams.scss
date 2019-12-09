@@ -1,3 +1,31 @@
 // Place all the styles related to the Exams controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.examPage {
+    border-style: solid;
+    border-color: green;
+    background-image: url(crumpledpaper.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+//h1 {
+  //  font-size: 50px;
+    //font-family: Verdana, Times New Roman, sans-serif;
+ //   font-style: bold;
+//}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+
