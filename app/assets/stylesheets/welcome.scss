@@ -4,9 +4,8 @@
 header {
     border-style: solid;
     border-color: black;
-    background-image: url(crumpledpaper.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: rgba(255, 255, 255,0.5);
+    
     
 }
 h1 {
@@ -25,8 +24,10 @@ h1 {
 }
 
 body {
+    background-image: url(crumpledpaper.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
     
-    background-color: white;
 }
 
 div {
